@@ -25,12 +25,12 @@ if [ -z "${AWS_BUCKET_LOCATION}" ]; then
     exit 1
 fi
 
-if [ -z "$(ls -A $MYSQL_USER)" ]; then
+if [ -z "${MYSQL_USER}" ]; then
     echo "ERROR: The environment variable MYSQL_USER is not set."
     exit 1
 fi
 
-if [ -z "$(ls -A $MYSQL_PASSWORD)" ]; then
+if [ -z "${MYSQL_PASSWORD}" ]; then
     echo "ERROR: The environment variable MYSQL_PASSWORD is not set."
     exit 1
 fi
