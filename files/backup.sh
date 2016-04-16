@@ -7,7 +7,7 @@ BACKUP_DIR="/root/$TIMESTAMP"
 mkdir "$BACKUP_DIR"
 
 for db in $databases; do
-    mysqldump --force --opt --host=$MYSQL_HOST --user=$MYSQL_USER -p$MYSQL_PASSWORD --databases $db > "$BACKUP_DIR/$db.sql"
+    mysqldump --force --opt --host=mysql --user=$MYSQL_USER -p$MYSQL_PASSWORD --databases $db > "$BACKUP_DIR/$db.sql"
 done
 
 tar -cpzf "$BACKUP_DIR.tar.gz" "$BACKUP_DIR"
