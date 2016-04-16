@@ -8,7 +8,7 @@ This image provides an easy way to backup all databases and upload to S3 schedul
 
 ## Example Usage
 
-    docker run -it --rm --env AWS_ACCESS_KEY="ABC123" --env AWS_SECRET_KEY="dfdsfsf/234234fgf/example" --env AWS_BUCKET=s3://my-backup-bucket --env AWS_BUCKET_LOCATION=EU -v /var/important-folder:/backup --env BACKUP_SCHEDULE="0 * * * *" --env MYSQL_USER="backupuser" --env MYSQL_PASSWORD="backuppass" --link=mysql:mysql thomaslomas/mysql-s3cmd-cron
+    docker run -it --rm --env AWS_ACCESS_KEY="ABC123" --env AWS_SECRET_KEY="dfdsfsf/234234fgf/example" --env AWS_BUCKET=s3://my-backup-bucket --env AWS_BUCKET_LOCATION=EU --env BACKUP_SCHEDULE="0 * * * *" --env MYSQL_USER="backupuser" --env MYSQL_PASSWORD="backuppass" --link=mysql:mysql thomaslomas/mysql-s3cmd-cron
 
 ## Environmental Variables
 
