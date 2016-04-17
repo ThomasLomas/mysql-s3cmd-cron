@@ -12,4 +12,5 @@ done
 
 tar -cpzf "$BACKUP_DIR.tar.gz" "$BACKUP_DIR"
 s3cmd put "$BACKUP_DIR.tar.gz" "$AWS_BUCKET"
-rm -f "$BACKUP_DIR $BACKUP_DIR.tar.gz"
+rm -rf "$BACKUP_DIR"
+rm -f "$BACKUP_DIR.tar.gz"
